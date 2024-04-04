@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 
 
@@ -20,7 +20,7 @@ export class MongoDatabase {
             await mongoose.connect(mongoUrl, {
                 dbName
             });
-           // console.log('mongo connected');
+            //console.log('mongo connected');
             return true
         } catch (error) {
           //  console.log('mongo connection error: ', error);
