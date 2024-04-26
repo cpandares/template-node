@@ -16,16 +16,16 @@ export class UserEntity {
 
     static fromObject( object: { [key:string]:any } ){
         const { id, _id, name,email,isValidated,password,role,avatar } = object;
-
+        console.log(object.name)
         if(!_id && !id){
             throw CustomError.badRequest('Missing ID');
         }
 
         if(!name){
-            throw CustomError.badRequest('Missing Name')
+            throw CustomError.badRequest('Missing Name User Entity')
         }
         if(!email){
-            throw CustomError.badRequest('Missing Name')
+            throw CustomError.badRequest('Missing Email User Entity')
         }
         if(isValidated === undefined){
             throw CustomError.badRequest('Missing Email Validated')

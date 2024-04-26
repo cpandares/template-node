@@ -19,12 +19,13 @@ export const jwtAdapter = (payload:any, expiresIn:string = '2h') =>{
 }
 
 
-export const jwtVerify = (token:string) =>{
+export const jwtVerify =  <T>(token:string): Promise<T | null> =>{
     return new Promise((resolve) => {
         jwt.verify(token, secret, (err, decoded) => {
             if ( err ) return resolve(null);
             
-            resolve(decoded);
+            resolve(decoded as T);
+            
         });
     });
 }
