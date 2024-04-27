@@ -8,3 +8,5 @@ export * from './entities/user.entity';
 export * from './dtos/category/create.dto';
 
 export * from './dtos/shared/pagination.dto';
+
+export * from './dtos/product/create.dto';
